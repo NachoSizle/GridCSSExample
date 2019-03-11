@@ -1,0 +1,109 @@
+body {
+    background-color: red;
+    margin: 0;
+}
+
+.container {
+    max-width: 1440px;
+    height: 100%;
+    background-color: green;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 100px 400px 100px;
+    grid-template-areas: "header""main""secondary";
+}
+
+ul li {
+    list-style: none;
+}
+
+header {
+    height: 100px;
+    grid-area: header;
+    display: grid;
+    background-color: blue;
+    grid-template-areas: "logo list";
+    justify-content: space-between;
+}
+
+header .logo {
+    grid-area: logo;
+    height: 100px;
+    width: 200px;
+    background-color: orange;
+}
+
+header nav {
+    grid-area: list;
+    height: 100px;
+}
+
+header nav ul {
+    margin: 0;
+    height: 100%;
+    display: grid;
+    background-color: white;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1rem;
+}
+
+header nav ul li {
+    width: 50px;
+    height: 100%;
+    background-color: gray;
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+
+section .main {
+    height: 400px;
+    grid-area: main;
+    background-color: brown;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: "profile mainContent";
+}
+
+section .main .profile {
+    grid-area: profile;
+    background-color: pink;
+}
+
+section .main .main-content {
+    grid-area: mainContent;
+    background-color: orange;
+    display: grid;
+    grid-template-rows: repeat(3, 50px);
+}
+
+section .main .main-content .row1,
+.row3 {
+    display: grid;
+    grid-template-columns: 50px 50px;
+    justify-content: space-between;
+}
+
+section .main .main-content .row2 {
+    display: grid;
+    grid-template-columns: 50px;
+    justify-content: center;
+}
+
+section .main .main-content>div>div {
+    background-color: yellow;
+    width: 50px;
+}
+
+section .secondary-content {
+    height: 100px;
+    grid-area: secondary;
+    background-color: blueviolet;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 1rem;
+}
+
+section .secondary-content>div {
+    background-color: white;
+}
